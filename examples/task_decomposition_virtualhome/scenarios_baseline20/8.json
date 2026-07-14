@@ -1,0 +1,13 @@
+{
+  "instructions": [
+    "take the potato from the counter and place it in the microwave"
+  ],
+  "program": [
+    "WalkTowards(<counter>)",
+    "Grab(<potato>)",
+    "WalkTowards(<microwave>)",
+    "Open(<microwave>)",
+    "PutIn(<potato>, <microwave>)",
+    "Close(<microwave>)"
+  ]
+}

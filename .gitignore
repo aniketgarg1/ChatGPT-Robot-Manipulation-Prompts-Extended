@@ -1,6 +1,32 @@
 .vscode/
+.idea/
+.DS_Store
 last_response.txt
-# Byte-compiled / optimized / DLL files
+
+# Local credentials — never commit real API keys
+secrets.json
+*.pem
+.env
+.env.*
+!.env.example
+
+# Local virtualenvs
+.venv/
+.venv*/
+venv/
+ENV/
+
+# Vendored / local simulator checkouts (install separately)
+/virtualhome/
+
+# Run outputs, plots, and scratch evaluations
+**/out_*/
+**/out/
+benchmark_summary.json
+out_learning_memory.json
+planner_learned_rules.json
+ai2thor_*.png
+**/trial_*/
 __pycache__/
 *.py[cod]
 *$py.class

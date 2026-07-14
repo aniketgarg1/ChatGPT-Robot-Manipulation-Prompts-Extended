@@ -1,0 +1,21 @@
+[user]
+When you produce dictionary["task_cohesion"], follow these feasibility rules (they reduce execution failures when this plan is mapped to a simulator or real robot):
+
+1. **Objects and names**: Use only object and asset tokens that appear in the input environment. dictionary["task_cohesion"]["object_name"] must name the primary manipulated object from that list and must match the instruction.
+
+2. **Receptacles and doors**: If the goal requires placing something inside a container or appliance (e.g. fridge, drawer, cabinet) or the state shows `closed()` on a relevant part, include explicit open actions (`open_by_rotate()`, `open_by_slide()`, etc. from the ROBOT ACTION LIST) before the hand enters or before release inside that space. Include matching close actions only when the instruction asks to close.
+
+3. **Order of operations**: Prefer: approach / move_hand → grasp → detach / move → interact (open/adjust) → place / attach → release. Do not release until the object is at the instructed target when the task is placement.
+
+4. **Alignment**: `task_sequence` and `step_instructions` must have the same length, with each step_instruction describing the corresponding atomic action.
+
+5. **Linear plans**: Do not use conditionals, branches, or pseudo-code in `task_sequence`. Every entry must be exactly one allowed call from the ROBOT ACTION LIST.
+
+6. **Goal preservation**: The final `environment_after` must reflect the user's instruction (correct object and target location/state). Do not substitute a different object or goal.
+
+7. **Unreachable states**: If the instruction cannot be satisfied with the given environment, set dictionary["question"] to a short clarification request and keep other keys consistent with that uncertainty.
+
+-------------------------------------------------------
+The texts above are part of the overall instruction. Do not start working yet:
+[assistant]
+Understood. Waiting for next input.

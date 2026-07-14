@@ -1,0 +1,11 @@
+{
+  "instructions": [
+    "take the pan from the stove and place it in the sink"
+  ],
+  "program": [
+    "WalkTowards(<stove>)",
+    "Grab(<pan>)",
+    "WalkTowards(<sink>)",
+    "PutIn(<pan>, <sink>)"
+  ]
+}

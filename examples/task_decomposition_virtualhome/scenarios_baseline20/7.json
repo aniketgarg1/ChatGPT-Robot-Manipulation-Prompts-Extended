@@ -1,0 +1,11 @@
+{
+  "instructions": [
+    "take the plate from the table and put it in the sink"
+  ],
+  "program": [
+    "WalkTowards(<table>)",
+    "Grab(<plate>)",
+    "WalkTowards(<sink>)",
+    "PutIn(<plate>, <sink>)"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "instructions": [
+    "take the fork from the table and place it in the sink"
+  ],
+  "program": [
+    "WalkTowards(<table>)",
+    "Grab(<fork>)",
+    "WalkTowards(<sink>)",
+    "PutIn(<fork>, <sink>)"
+  ]
+}

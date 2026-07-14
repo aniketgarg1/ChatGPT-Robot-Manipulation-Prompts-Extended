@@ -1,0 +1,11 @@
+{
+  "instructions": [
+    "take the pepper shaker from the counter and place it on the table"
+  ],
+  "program": [
+    "WalkTowards(<counter>)",
+    "Grab(<peppershaker>)",
+    "WalkTowards(<table>)",
+    "Put(<peppershaker>, <table>)"
+  ]
+}

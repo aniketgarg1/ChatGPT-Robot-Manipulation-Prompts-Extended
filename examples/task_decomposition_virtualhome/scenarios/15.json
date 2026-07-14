@@ -1,0 +1,13 @@
+{
+  "instructions": [
+    "take the apple and put it in the fridge"
+  ],
+  "program": [
+    "WalkTowards(<kitchen>)",
+    "Grab(<apple>)",
+    "WalkTowards(<fridge>)",
+    "Open(<fridge>)",
+    "PutIn(<apple>, <fridge>)",
+    "Close(<fridge>)"
+  ]
+}

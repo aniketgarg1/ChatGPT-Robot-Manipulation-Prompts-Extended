@@ -77,7 +77,7 @@ Example 2:
         "bring the spam above the trash bin",
         "release the spam to drop it in the trash bin"
     ],
-    "object_name": "<sponge>"},
+    "object_name": "<spam>"},
 "environment_before": {"assets":["<table>", "<shelf_bottom>", "<shelf_top>", "<trash_bin>", "<floor>"],
                 "asset_states": {"<shelf_bottom>": "on_something(<table>)", 
                                 "<trash_bin>": "on_something(<floor>)"},

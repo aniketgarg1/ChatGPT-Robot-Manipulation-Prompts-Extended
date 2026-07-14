@@ -1,0 +1,21 @@
+[user]
+When you produce dictionary["task_cohesion"], follow these rules so the plan is executable in simulation and consistent with the HUMAN ACTION LIST:
+
+1. **Tokens**: Only use rooms and objects that appear in the given environment snapshot. Object names must match those tokens (including angle brackets if used in the prompt).
+
+2. **Open before PutIn**: For any `PutIn(<obj>,<container>)` where the container is openable, emit an `Open(<container>)` (and usually `Walktowards(<container>)` first if needed) before `PutIn`, unless the environment already states the container is open.
+
+3. **Navigation and reach**: Before `Grab(<obj>)`, ensure the character can reach the object: include `Walktowards(...)` steps toward the room or object as needed. Before `Open`, `Close`, `SwitchOn`, or `Put`/`PutIn`, be close enough: add `Walktowards` when the instruction or states imply a different location.
+
+4. **Action format**: Each entry in `task_sequence` must be a single call from the HUMAN ACTION LIST, with correct arity (e.g. `Grab(<apple>)`, `PutIn(<apple>,<fridge>)`). No conditionals, loops, or natural-language-only lines.
+
+5. **step_instructions**: Must be the same length as `task_sequence`, with each line explaining the matching step.
+
+6. **Goal**: `environment_after` and the overall sequence must satisfy the user instruction without changing the goal object or target.
+
+7. **Uncertainty**: If the environment makes the instruction impossible, say so briefly in the last step_instructions or keep the sequence minimal and consistent with what is achievable.
+
+-------------------------------------------------------
+The texts above are part of the overall instruction. Do not start working yet:
+[assistant]
+Understood. Waiting for next input.

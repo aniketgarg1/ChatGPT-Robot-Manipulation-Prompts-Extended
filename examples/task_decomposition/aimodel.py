@@ -16,6 +16,7 @@ prompt_load_order = ['prompt_role',
                      'prompt_function',
                      'prompt_environment',
                      'prompt_output_format',
+                     'prompt_planning_constraints',
                      'prompt_example']
 
 
@@ -30,7 +31,7 @@ class ChatGPT:
             self,
             credentials,
             prompt_load_order,
-            use_azure=True,
+            use_azure=False,
             api_version='2023-05-15'):
         self.use_azure = use_azure
         if self.use_azure:
@@ -232,10 +233,7 @@ if __name__ == "__main__":
             "object_states": {
                 "<spam>": "on_something(<table>)",
                 "<juice>": "on_something(<shelf_bottom>)"}}
-        instructions = ['Put the juice on top of the shelf',
-                        'Throw away the spam into the trash bin',
-                        'Move the juice on top of the table',
-                        'Throw away the juice']
+        instructions = [input("Enter your instruction: ")]
     # 2. example of opening and closing the fridge, and putting the juice on
     # the floor
     elif scenario_name == 'fridge':
@@ -303,12 +301,12 @@ if __name__ == "__main__":
     aimodel = ChatGPT(
         credentials,
         prompt_load_order=prompt_load_order,
-        use_azure=True,
+        use_azure=False,
         api_version='2022-12-01')
 
     if not os.path.exists('./out/' + scenario_name):
         os.makedirs('./out/' + scenario_name)
-    for i, instruction in enumerate(instructions):
+    for i, instruction in enumerate(instructions[:1]):
         print(json.dumps(environment))
         text = aimodel.generate(
             instruction,

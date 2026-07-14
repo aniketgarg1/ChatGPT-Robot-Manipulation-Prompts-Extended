@@ -1,0 +1,11 @@
+{
+  "instructions": [
+    "take the tomato from the counter and put it in the bowl"
+  ],
+  "program": [
+    "WalkTowards(<counter>)",
+    "Grab(<tomato>)",
+    "WalkTowards(<bowl>)",
+    "PutIn(<tomato>, <bowl>)"
+  ]
+}

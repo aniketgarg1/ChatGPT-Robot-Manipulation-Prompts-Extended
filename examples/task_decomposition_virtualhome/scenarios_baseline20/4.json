@@ -1,0 +1,11 @@
+{
+  "instructions": [
+    "take the book from the table and put it on the shelf"
+  ],
+  "program": [
+    "WalkTowards(<table>)",
+    "Grab(<book>)",
+    "WalkTowards(<shelf>)",
+    "Put(<book>, <shelf>)"
+  ]
+}

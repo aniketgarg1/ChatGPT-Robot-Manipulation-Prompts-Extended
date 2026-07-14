@@ -1,0 +1,13 @@
+{
+  "instructions": [
+    "take the pie from the table and put it in the microwave"
+  ],
+  "program": [
+    "WalkTowards(<table>)",
+    "Grab(<pie>)",
+    "WalkTowards(<microwave>)",
+    "Open(<microwave>)",
+    "PutIn(<pie>, <microwave>)",
+    "Close(<microwave>)"
+  ]
+}

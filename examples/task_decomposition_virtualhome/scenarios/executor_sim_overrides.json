@@ -1,0 +1,35 @@
+{
+  "global_object_map": {
+    "toaster": "Toaster",
+    "fryingpan": "Pan",
+    "pie": "Apple",
+    "salmon": "Tomato",
+    "waterglass": "Mug",
+    "condimentshaker": "SaltShaker",
+    "condimentbottle": "WineBottle",
+    "washingsponge": "DishSponge",
+    "cutleryknife": "Knife",
+    "breadslice": "Bread",
+    "sink": "SinkBasin",
+    "table": "DiningTable",
+    "kitchentable": "DiningTable",
+    "bookshelf": "ShelvingUnit",
+    "stove": "StoveBurner",
+    "kitchencounter": "CounterTop",
+    "counter": "CounterTop",
+    "tv": "Television",
+    "faucet": "Faucet"
+  },
+  "scenarios": {
+    "1": {
+      "ai2thor_scene": "FloorPlan4",
+      "object_map": {
+        "toaster": "Toaster",
+        "bread": "Bread",
+        "breadslice": "Bread",
+        "plate": "Plate",
+        "kitchentable": "DiningTable"
+      }
+    }
+  }
+}
